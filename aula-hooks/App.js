@@ -14,6 +14,7 @@ import { useState } from "react";
 
 import Login from "./Login";
 import Registe from "./Registe";
+import Exercicio from "./Exercicio";
 
 export default function App() {
   const [contador, setContador] = useState(0);
@@ -31,7 +32,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container} showsVerticalScrollIndicator={false}>
-      <Text style={styles.textoColorido}>{contador}</Text>
+      {/* <Text style={styles.textoColorido}>{contador}</Text>
 
       <Button
         title="Clique aqui para somar"
@@ -59,7 +60,8 @@ export default function App() {
         onPress={() => setShowImage(!showImage)}
       />
 
-      <StatusBar style="auto" />
+      <StatusBar style="auto" /> */}
+      <Exercicio/>
     </SafeAreaView>
   );
 }
