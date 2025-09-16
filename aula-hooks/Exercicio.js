@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
 import React, { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Exercicio() {
   const [numero1, setNumero1] = useState(0);
@@ -14,40 +13,37 @@ export default function Exercicio() {
   }
 
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text style={styles.texto}>Soma de números</Text>
-        <TextInput
-          value={numero1}
-          onChangeText={(value) => setNumero1(value)}
-          keyboardType="numeric"
-          style={styles.caixaTexto}
-          placeholder="Informe o primeiro número"
-        />
-        <Text style={styles.texto}>+</Text>
-        <TextInput
-          onChangeText={(value) => setNumero2(value)}
-          value={numero2}
-          keyboardType="numeric"
-          style={styles.caixaTexto}
-          placeholder="Informe o segundo número"
-        />
-        <Text style={styles.texto}>=</Text>
-        <Text style={styles.texto}>{resultado}</Text>
-        <Button title="Calcular" onPress={() => calcularValores()} />
-      </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text style={styles.texto}>Soma de números</Text>
+      <TextInput
+        value={numero1}
+        onChangeText={(value) => setNumero1(value)}
+        keyboardType="numeric"
+        style={styles.caixaTexto}
+        placeholder="Informe o primeiro número"
+      />
+      <Text style={styles.texto}>+</Text>
+      <TextInput
+        onChangeText={(value) => setNumero2(value)}
+        value={numero2}
+        keyboardType="numeric"
+        style={styles.caixaTexto}
+        placeholder="Informe o segundo número"
+      />
+      <Text style={styles.texto}>=</Text>
+      <Text style={styles.texto}>{resultado}</Text>
+      <Button title="Calcular" onPress={() => calcularValores()} />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "top",
+    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
     gap: 10,
-    marginTop: 50,
     paddingHorizontal: 30,
   },
   texto: {

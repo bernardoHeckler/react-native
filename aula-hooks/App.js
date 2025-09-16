@@ -17,6 +17,10 @@ import Registe from "./Registe";
 import Exercicio from "./Exercicio";
 
 export default function App() {
+  return <Exercicio />;
+}
+
+function Teste() {
   const [contador, setContador] = useState(0);
   const [showImage, setShowImage] = useState(true);
 
@@ -25,14 +29,14 @@ export default function App() {
 
   function cadastrar() {}
 
-  function Entrar() {
+  function multiplicar() {
     const resultado = contador * contador;
-    Alert.alert("Erro ao fazer o login\n você precisa criar uma tela de login com inputs");
+    Alert.alert("Erro ao fazer o login");
   }
 
   return (
     <SafeAreaView style={styles.container} showsVerticalScrollIndicator={false}>
-      {/* <Text style={styles.textoColorido}>{contador}</Text>
+      <Text style={styles.textoColorido}>{contador}</Text>
 
       <Button
         title="Clique aqui para somar"
@@ -43,7 +47,7 @@ export default function App() {
         onPress={() => setContador(contador - 1)}
       />
 
-      <Button title="Entrar" onPress={() => Entrar()} />
+      <Button title="Multiplicar" onPress={() => multiplicar()} />
 
       {showImage && (
         <Image
@@ -60,8 +64,7 @@ export default function App() {
         onPress={() => setShowImage(!showImage)}
       />
 
-      <StatusBar style="auto" /> */}
-      <Exercicio/>
+      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
